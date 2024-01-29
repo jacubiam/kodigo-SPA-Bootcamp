@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword, getAuth, AuthError } from "firebase/auth"
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { app } from "../firebase"
 import { useState } from "react"
 import { emailValidation, maxPassword, minPassword } from "../utils/validators"
@@ -15,11 +15,12 @@ export const LoginPage = () => {
     const auth = getAuth(app)
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
     const [error, setError] = useState<string | undefined>()
+    const nav = useNavigate()
 
-    511
     const LoginUser = async (data: Inputs) => {
         try {
             await signInWithEmailAndPassword(auth, data.email, data.password)
+            nav('/auth/home')
             console.log("Logueado correctamente")
         } catch (error) {
             const authError = error as AuthError

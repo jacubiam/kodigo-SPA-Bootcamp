@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth"
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { app } from "../firebase"
 import { useState } from "react"
 import { emailValidation, maxPassword, minPassword } from "../utils/validators"
@@ -14,13 +14,15 @@ export const RegisterPage = () => {
         name: string
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
+    const { register, handleSubmit, formState: { errors }, getValues } = useForm<Inputs>()
     const auth = getAuth(app)
     const [error, setError] = useState<string | undefined>()
+    const nav = useNavigate()
 
     const createUser = async (data: Inputs) => {
         try {
             await createUserWithEmailAndPassword(auth, data.email, data.password)
+            nav('/login')
         } catch (error) {
             if (error instanceof Error) {
                 setError(error.message.replace('Firebase:', ''))
@@ -43,7 +45,10 @@ export const RegisterPage = () => {
                             <label>Email or Phone number</label>
                             <div className="mt-1 mb-3">
                                 <input type="text"
-                                    {...register('email', { required: 'Email is required', pattern: emailValidation })}
+                                    {...register('email', {
+                                        required: 'Email is required',
+                                        pattern: emailValidation
+                                    })}
                                     className="form-control"
                                     placeholder="Please type your email"
                                 />
@@ -65,12 +70,17 @@ export const RegisterPage = () => {
                             <div className="mt-1 mb-5">
                                 <label>Confirm your Password</label>
                                 <input type="password"
-                                    {...register('confirmPassword', { required: 'Confirmation password is required', minLength: minPassword, maxLength: maxPassword })}
+                                    {...register('confirmPassword', {
+                                        required: 'Confirmation password is required',
+                                        minLength: minPassword,
+                                        maxLength: maxPassword,
+                                        validate: (value) => value === getValues('password')
+                                    })}
                                     className="form-control"
                                     placeholder="Please type your confirmation password"
                                 />
                                 {
-                                    errors.confirmPassword && <span className="text-danger">{errors.confirmPassword.message}</span>
+                                    errors.confirmPassword && <span className="text-danger">Passwords must match</span>
                                 }
                             </div>
                             <div className="mt-3">
