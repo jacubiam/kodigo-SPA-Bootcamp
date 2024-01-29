@@ -6,8 +6,8 @@ import { RegisterPage } from "./pages/RegisterPage"
 function App() {
 
   const routes = createBrowserRouter([
-    { path: '/', element: <LoginPage /> },
-    { path: '/register', element: <RegisterPage /> }
+    { path: '/', element: <RegisterPage /> },
+    { path: '/login', element: <LoginPage /> }
   ])
 
   return (
