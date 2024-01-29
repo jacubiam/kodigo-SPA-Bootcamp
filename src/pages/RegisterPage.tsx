@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 export const RegisterPage = () => {
+
     return (
         <>
             <div className="container d-flex justify-content-center">
