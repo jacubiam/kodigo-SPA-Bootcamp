@@ -66,7 +66,10 @@ export const LoginPage = () => {
                             <div className=" d-flex justify-content-center mt-5">
                                 <button type="submit" className="btn btn-danger w-50">Login</button>
                             </div>
+                            <Link to={'/reset'}>Reset Password</Link>
+
                         </form>
+
 
                     </div>
 

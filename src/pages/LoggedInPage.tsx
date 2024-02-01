@@ -1,4 +1,4 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth"
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth"
 import { app } from "../firebase"
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react"
@@ -6,6 +6,11 @@ import { useEffect } from "react"
 export const LoggedInPage = () => {
     const auth = getAuth(app)
     const nav = useNavigate()
+
+    const logout = async () => {
+        await signOut(auth)
+        nav('/login')
+    }
 
     useEffect(() => {
         const authentication = async () => {
@@ -23,6 +28,7 @@ export const LoggedInPage = () => {
     return (
         <>
             <h1>Logged in page</h1>
+            <button type="button" onClick={logout}>End session</button>
         </>
     )
 }
