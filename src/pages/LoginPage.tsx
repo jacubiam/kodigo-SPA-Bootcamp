@@ -58,6 +58,9 @@ export const LoginPage = () => {
                                 {
                                     errors.password && <span className="text-danger">{errors.password.message}</span>
                                 }
+                                <div className="d-flex flex-row-reverse">
+                                    <Link to={'/reset'} className="m-1 password-recovery-link">Forgot password?</Link>
+                                </div>
                             </div>
                             {
                                 error && <span className="text-danger">{error}</span>
@@ -66,7 +69,6 @@ export const LoginPage = () => {
                             <div className=" d-flex justify-content-center mt-5">
                                 <button type="submit" className="btn btn-danger w-50">Login</button>
                             </div>
-                            <Link to={'/reset'}>Reset Password</Link>
 
                         </form>
 

@@ -2,3 +2,9 @@
     text-decoration: none;
     color: black;
 }
+
+.password-recovery-link {
+    text-decoration: underline;
+    color: black;
+    
+}
