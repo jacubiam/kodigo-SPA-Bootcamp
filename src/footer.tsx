@@ -2,7 +2,7 @@
  
   <footer
           className="text-center text-lg-start text-white"
-          style={{"background-color: #929fba"}}
+          style=backGround: {{"#3b5998"}} 
           >
     
     <div class="container p-4 pb-0">
