@@ -26,7 +26,7 @@ const HomePage = () => {
     return (
         <>
             <header className="text-center" style={{ height: "100px" }}>
-                <h3>Placeholder del footer</h3>
+                <h3>Placeholder del header</h3>
                 <Link className="me-3" to={'/signup'}>Crear cuenta</Link>
                 <Link to={'/login'}>Iniciar sesión</Link>
             </header>
