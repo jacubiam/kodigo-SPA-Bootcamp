@@ -39,7 +39,7 @@ const BootcampsDocentes: React.FC = () => {
                             </div>
                             <div className="p-3">
                                 <p className="h2 card-title">{data.docente}</p>
-                                <p className="h5 pb-3">{data.titulo}</p>
+                                <p className="h5 pb-1">{data.titulo}</p>
                                 <p className="card-text">{data.descripcion}</p>
                             </div>
                         </div>
