@@ -4,12 +4,13 @@ import { useEffect, useState } from "react"
 import BootcampCard from "../components/HomePage/BootcampCard"
 import { Link } from "react-router-dom"
 import BootcampsDocentes from "../components/HomePage/BootcampsDocentes"
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
-import logo from "../assets/logo-kodigo.png";
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import Button from 'react-bootstrap/Button'
+import logo from "../assets/logo-kodigo.png"
+import Carousel from "../components/HomePage/Carousel"
 
 const HomePage = () => {
     const [bootcamps, setBootcamps] = useState<DocumentData[]>([])
@@ -69,7 +70,9 @@ const HomePage = () => {
                 </Navbar>
 
             </header>
-            <div className="container" >
+            <main>
+            <Carousel/>
+            <section className="container" >
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     {bootcamps && bootcamps.map((bootcamp) => {
                         return (
@@ -79,9 +82,9 @@ const HomePage = () => {
                         )
                     })}
                 </div>
-            </div>
-            <BootcampsDocentes />
-
+            </section>
+            <BootcampsDocentes/>
+            </main>
         </>
     )
 }
