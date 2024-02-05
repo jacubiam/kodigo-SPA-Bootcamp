@@ -56,7 +56,13 @@
                href="#!"
                role="button"
                ><i className="fab fa-facebook-f"></i
-              ></a>
+               
+                <div class="text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
+                </div>                                  
+               
+                  
+               ></a>
 
            
             <a
@@ -74,6 +80,12 @@
                href="#!"
                role="button"
                ><i className="fab fa-google"></i
+
+                  <div class="text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png">
+                </div>                                
+               
+                                               
               ></a>
 
            
@@ -83,6 +95,10 @@
                href="#!"
                role="button"
                ><i className="fab fa-instagram"></i
+                  
+                 <div class="text-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" class="rounded" alt">
+                </div>                                   
               ></a>
 
            
@@ -92,6 +108,10 @@
                href="#!"
                role="button"
                ><i className="fab fa-linkedin-in"></i
+
+                 <div class="text-center">
+                <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png">
+                </div>                                      
               ></a>
            
             <a
@@ -100,6 +120,10 @@
                href="#!"
                role="button"
                ><i className="fab fa-github"></i
+                  <div class="text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+                </div> 
+                                               
               ></a>
           </div>
         </div>
