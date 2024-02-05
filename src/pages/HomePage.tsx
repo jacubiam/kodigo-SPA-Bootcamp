@@ -3,6 +3,7 @@ import { db } from "../firebase"
 import { useEffect, useState } from "react"
 import BootcampCard from "../components/HomePage/BootcampCard"
 import { Link } from "react-router-dom"
+import BootcampsDocentes from "../components/HomePage/BootcampsDocentes"
 
 
 const HomePage = () => {
@@ -41,6 +42,8 @@ const HomePage = () => {
                     })}
                 </div>
             </div>
+            <BootcampsDocentes />
+
         </>
     )
 }

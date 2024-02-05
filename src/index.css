@@ -6,5 +6,12 @@
 .password-recovery-link {
     text-decoration: underline;
     color: black;
-    
+
+}
+
+.img {
+    object-fit: contain;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 5.50rem;
 }

@@ -77,7 +77,7 @@ export const LoginPage = () => {
 
                     <div className="d-flex justify-content-between mt-4">
                         <Link className="register-link m-2" to={'/'}> Home </Link>
-                        <Link className="register-link m-2" to={'/'}> Register </Link>
+                        <Link className="register-link m-2" to={'/signup'}> Register </Link>
 
                     </div>
 
