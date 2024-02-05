@@ -2,7 +2,7 @@
  
   <footer
           className="text-center text-lg-start text-white"
-          style=backGround: {{"#3b5998"}} 
+          style={{backGround:"3b5998"}} 
           >
     
     <div class="container p-4 pb-0">
@@ -52,7 +52,7 @@
 
                       <a
                className="btn btn-primary btn-floating m-1"
-               style={{"background-color: #3b5998"}}
+               style={{backGround:"#3b5998"}} 
                href="#!"
                role="button"
                ><i className="fab fa-facebook-f"></i
@@ -61,7 +61,7 @@
            
             <a
                className="btn btn-primary btn-floating m-1"
-               style={{"background-color: #55acee"}}
+               style={{backGround:"#55acee"}} 
                href="#!"
                role="button"
                ><i className="fab fa-twitter"></i
@@ -70,7 +70,7 @@
            
             <a
                className="btn btn-primary btn-floating m-1"
-               style={{"background-color: #dd4b39"}}
+               style={{backGround:"#dd4b39"}} 
                href="#!"
                role="button"
                ><i className="fab fa-google"></i
@@ -79,7 +79,7 @@
            
             <a
                className="btn btn-primary btn-floating m-1"
-               style={{"background-color: #ac2bac"}}
+               style={{backGround:"#ac2bac"}} 
                href="#!"
                role="button"
                ><i className="fab fa-instagram"></i
@@ -88,7 +88,7 @@
            
             <a
                className="btn btn-primary btn-floating m-1"
-               style={{"background-color: #0082ca"}}
+               style={{backGround:"#0082ca"}} 
                href="#!"
                role="button"
                ><i className="fab fa-linkedin-in"></i
@@ -96,7 +96,7 @@
            
             <a
                className="btn btn-primary btn-floating m-1"
-               style={{"background-color: #333333"}}
+               style={{backGround:"#333333"}} 
                href="#!"
                role="button"
                ><i className="fab fa-github"></i
@@ -110,7 +110,7 @@
   
     <div
          className="text-center p-3"
-         style={{"background-color: rgba(0, 0, 0, 0.2)"}}
+         style={{backGround:"rgba(0, 0, 0, 0.2"}}
          >
       © 2020 Copyright: Kodigo Academy
       <a className="text-white" href=" "
