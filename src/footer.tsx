@@ -112,7 +112,7 @@
          className="text-center p-3"
          style={{backGround:"rgba(0, 0, 0, 0.2"}}
          >
-      © 2020 Copyright: Kodigo Academy
+      © 2024 Copyright: Kodigo Academy
       <a className="text-white" href=" "
          >MDBootstrap.com</a
         >
