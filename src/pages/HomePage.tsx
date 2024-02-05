@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import BootcampCard from "../components/HomePage/BootcampCard"
 import { Link } from "react-router-dom"
 import BootcampsDocentes from "../components/HomePage/BootcampsDocentes"
+import Carousel from "../components/HomePage/Carousel"
 
 
 const HomePage = () => {
@@ -31,7 +32,9 @@ const HomePage = () => {
                 <Link className="me-3" to={'/signup'}>Crear cuenta</Link>
                 <Link to={'/login'}>Iniciar sesión</Link>
             </header>
-            <div className="container" >
+            <main>
+            <Carousel/>
+            <section className="container" >
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     {bootcamps && bootcamps.map((bootcamp) => {
                         return (
@@ -41,9 +44,9 @@ const HomePage = () => {
                         )
                     })}
                 </div>
-            </div>
-            <BootcampsDocentes />
-
+            </section>
+            <BootcampsDocentes/>
+            </main>
         </>
     )
 }
