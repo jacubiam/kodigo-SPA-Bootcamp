@@ -34,6 +34,7 @@ const HomePage = () => {
                 <Banner />
                 <Carousel />
                 <section className="container" >
+                    <h1 className="text-center mb-4">Nuestros Bootcamps</h1>
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                         {bootcamps && bootcamps.map((bootcamp) => {
                             return (
