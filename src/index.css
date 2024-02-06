@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
 .register-link {
     text-decoration: none;
     color: black;
@@ -113,8 +115,61 @@
     left: 15%;
 }
 
+.hero-title {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.hero-title-brand {
+    font-size: calc(2rem + 6vw);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.hero-title-brand-subtext {
+    font-size: calc(1rem + 1vw);
+}
+
+.hero-text-header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(1.2rem + 0.9vw);
+} 
+
+.hero-text-header-subtext{
+    font-size: calc(1rem + 0.5vw);
+}
+
 @media screen and (min-width:576px) {
     .carousel-inner-text {
         top: 40%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .hero-title-brand {
+        font-size: 6rem;
+    }
+
+    .hero-title-brand-subtext {
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-text-header{
+        font-size: 2rem;
+    } 
+    
+    .hero-text-header-subtext{
+        font-size: 1.1rem;
+        letter-spacing: 2px;
     }
 }

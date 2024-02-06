@@ -2,7 +2,7 @@ const Carousel = () => {
     return (
         <>
             <h1 className="text-center fw-medium mb-4">¿Por qué elegir Kodigo?</h1>
-            <section id="carouselExampleAutoplaying" className="container carousel slide mb-5" data-bs-ride="carousel" data-bs-theme="dark">
+            <section id="carouselExampleAutoplaying" className="container-md carousel slide mb-5" data-bs-ride="carousel" data-bs-theme="dark">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>

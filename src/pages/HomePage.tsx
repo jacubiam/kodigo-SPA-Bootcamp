@@ -11,6 +11,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Button from 'react-bootstrap/Button'
 import logo from "../assets/logo-kodigo.png"
 import Carousel from "../components/HomePage/Carousel"
+import Banner from "../components/HomePage/Banner"
 
 const HomePage = () => {
     const [bootcamps, setBootcamps] = useState<DocumentData[]>([])
@@ -62,28 +63,29 @@ const HomePage = () => {
                             </Nav>
                             {/* <h3>Placeholder del header</h3> */}
                             <div className="btn-sign-in-up" >
-                                <Link className="me-3" to={'/signup'}><Button variant="success"className="bg-white text-dark sign-in">Crear cuenta</Button>{' '}</Link>
+                                <Link className="me-3" to={'/signup'}><Button variant="success" className="bg-white text-dark sign-in">Crear cuenta</Button>{' '}</Link>
                                 {/* <Link to={'/signup'}><Button variant="default">Crear cuenta</Button>{' '}</Link> */}
-                                <Link to={'/login'}><Button variant="secondary sign-up"className="ms-3">Iniciar sesión</Button>{' '}</Link>
+                                <Link to={'/login'}><Button variant="secondary sign-up" className="ms-3">Iniciar sesión</Button>{' '}</Link>
                             </div></Navbar.Collapse>
                     </Container>
                 </Navbar>
 
             </header>
             <main>
-            <Carousel/>
-            <section className="container" >
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    {bootcamps && bootcamps.map((bootcamp) => {
-                        return (
-                            <div key={bootcamp.title} className="col">
-                                <BootcampCard bootcamp={bootcamp} />
-                            </div>
-                        )
-                    })}
-                </div>
-            </section>
-            <BootcampsDocentes/>
+                <Banner />
+                <Carousel />
+                <section className="container" >
+                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        {bootcamps && bootcamps.map((bootcamp) => {
+                            return (
+                                <div key={bootcamp.title} className="col">
+                                    <BootcampCard bootcamp={bootcamp} />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </section>
+                <BootcampsDocentes />
             </main>
         </>
     )
