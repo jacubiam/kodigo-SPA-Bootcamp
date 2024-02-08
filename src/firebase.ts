@@ -1,13 +1,20 @@
 import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
 
+const API_KEY = import.meta.env.VITE_API_KEY
+const AUTH_DOMAIN = import.meta.env.VITE_AUTH_DOM
+const PROJECT_ID = import.meta.env.VITE_PROJECT_ID
+const STORAGE_BUCKET = import.meta.env.VITE_STORAGE_BUCKET
+const MESSAGING_SENDER_ID = import.meta.env.VITE_MESSAGING_SENDER_ID
+const APP_ID = import.meta.env.VITE_APP_ID
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDAhbVgnaKnBI4SyN8Y1dI114BKJ6IbQVw",
-  authDomain: "kodigo-spa-bootcamp.firebaseapp.com",
-  projectId: "kodigo-spa-bootcamp",
-  storageBucket: "kodigo-spa-bootcamp.appspot.com",
-  messagingSenderId: "435195972549",
-  appId: "1:435195972549:web:1ddc1b7862b1f1050c99ac"
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID
 }
 
 export const app = initializeApp(firebaseConfig)

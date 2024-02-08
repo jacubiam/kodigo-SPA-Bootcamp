@@ -19,7 +19,7 @@ const BootcampsDocentes: React.FC = () => {
                     data.push(doc.data())
                 })
                 setDocente(data)
-                console.log(data)
+            
             } catch (error) {
                 console.error("Error al obtener los docentes:", error)
             }
