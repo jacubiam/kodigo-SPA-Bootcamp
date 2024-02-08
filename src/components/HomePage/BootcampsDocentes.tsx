@@ -30,6 +30,9 @@ const BootcampsDocentes: React.FC = () => {
     return (
         <>
             <div className="container mt-5">
+
+                <h1 className="mb-5 text-primary">Conoce a tus intructores: </h1>
+
                 {docentes.map((data, index) => (
                     <div className="card mt-3">
 

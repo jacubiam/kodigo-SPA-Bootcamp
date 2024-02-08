@@ -12,10 +12,19 @@ export const LoginPage = () => {
         password: string
     }
 
+    type Calc = {
+        num1: number
+        num2: number
+    }
+
     const auth = getAuth(app)
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
     const [error, setError] = useState<string | undefined>()
     const nav = useNavigate()
+
+    const suma = (data: Calc) => {
+        let result = num1 + num2
+    }
 
     const LoginUser = async (data: Inputs) => {
         try {
@@ -35,7 +44,20 @@ export const LoginPage = () => {
                     <div className="card-body align-item-center">
                         <h5 className="card-title">Log in please</h5>
                         <p className="card-title mb-5"> Log in to your account to continue</p>
+
+                        <input type="number"
+                            placeholder="Ingresa el primer numero: "
+                            name="num1"
+                        />
+                        <input type="number"
+                            placeholder="Ingresa el segundo numero: "
+                            name="num2"
+                        />
+
+
                         <form onSubmit={handleSubmit(LoginUser)}>
+
+
                             <label htmlFor="email">Email or Phone number</label>
                             <div className="mt-1 mb-3">
                                 <input type="text"
