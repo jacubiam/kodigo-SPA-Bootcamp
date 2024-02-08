@@ -35,7 +35,7 @@ const BootcampsDocentes: React.FC = () => {
                     <div key={index} className="card mt-3">
                         <div className="d-flex card-body flex-lg-row docentes">
                             <div className="flex-column mb-3">
-                                <img src={data.img} className="img p-2" alt="..." />
+                                <img src={data.img} className="img p-2 docentes-img" alt="..." />
                             </div>
                             <div className="p-3">
                                 <p className="h2 card-title">{data.docente}</p>
