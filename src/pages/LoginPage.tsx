@@ -35,7 +35,10 @@ export const LoginPage = () => {
                     <div className="card-body align-item-center">
                         <h5 className="card-title">Log in please</h5>
                         <p className="card-title mb-5"> Log in to your account to continue</p>
+
                         <form onSubmit={handleSubmit(LoginUser)}>
+
+
                             <label htmlFor="email">Email or Phone number</label>
                             <div className="mt-1 mb-3">
                                 <input type="text"

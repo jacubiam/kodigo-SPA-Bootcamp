@@ -139,12 +139,12 @@
     font-size: calc(1rem + 1vw);
 }
 
-.hero-text-header{
+.hero-text-header {
     font-family: 'Montserrat', sans-serif;
     font-size: calc(1.2rem + 0.9vw);
-} 
+}
 
-.hero-text-header-subtext{
+.hero-text-header-subtext {
     font-size: calc(1rem + 0.5vw);
 }
 
@@ -164,12 +164,26 @@
         letter-spacing: 2px;
     }
 
-    .hero-text-header{
+    .hero-text-header {
         font-size: 2rem;
-    } 
-    
-    .hero-text-header-subtext{
+    }
+
+    .hero-text-header-subtext {
         font-size: 1.1rem;
         letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .docentes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .docentes-img {
+        object-fit: contain;
+        border-radius: 5.50rem;
+        width: 100%;
+        height: auto;
     }
 }
