@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react"
 import { collection, getDocs, DocumentData, orderBy, query } from "firebase/firestore"
 import { db } from "../firebase"
-import { useEffect, useState } from "react"
 import BootcampCard from "../components/HomePage/BootcampCard"
-import { Link } from "react-router-dom"
 import BootcampsDocentes from "../components/HomePage/BootcampsDocentes"
-
+import Carousel from "../components/HomePage/Carousel"
+import Banner from "../components/HomePage/Banner"
+import Header from "../components/Commons/Header"
 
 const HomePage = () => {
     const [bootcamps, setBootcamps] = useState<DocumentData[]>([])
@@ -26,24 +27,26 @@ const HomePage = () => {
 
     return (
         <>
-            <header className="text-center" style={{ height: "100px" }}>
-                <h3>Placeholder del header</h3>
-                <Link className="me-3" to={'/signup'}>Crear cuenta</Link>
-                <Link to={'/login'}>Iniciar sesión</Link>
+            <header className=" header-home text-center" style={{ height: "100px" }}>
+                <Header />
             </header>
-            <div className="container" >
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    {bootcamps && bootcamps.map((bootcamp) => {
-                        return (
-                            <div key={bootcamp.title} className="col">
-                                <BootcampCard bootcamp={bootcamp} />
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-            <BootcampsDocentes />
-
+            <main>
+                <Banner />
+                <Carousel />
+                <section className="container" >
+                    <h1 className="text-center mb-4">Nuestros Bootcamps</h1>
+                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        {bootcamps && bootcamps.map((bootcamp) => {
+                            return (
+                                <div key={bootcamp.title} className="col">
+                                    <BootcampCard bootcamp={bootcamp} />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </section>
+                <BootcampsDocentes />
+            </main>
         </>
     )
 }

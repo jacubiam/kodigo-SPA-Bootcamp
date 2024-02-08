@@ -30,13 +30,10 @@ const BootcampsDocentes: React.FC = () => {
     return (
         <>
             <div className="container mt-5">
-
-                <h1 className="mb-5 text-primary">Conoce a tus intructores: </h1>
-
+                <h1 className="text-center mb-4">Conoce a nuestros docentes</h1>
                 {docentes.map((data, index) => (
-                    <div className="card mt-3">
-
-                        <div key={index} className="d-flex card-body flex-row">
+                    <div key={index} className="card mt-3">
+                        <div className="d-flex card-body flex-lg-row docentes">
                             <div className="flex-column mb-3">
                                 <img src={data.img} className="img p-2" alt="..." />
                             </div>
