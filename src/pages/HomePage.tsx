@@ -6,6 +6,7 @@ import BootcampsDocentes from "../components/HomePage/BootcampsDocentes"
 import Carousel from "../components/HomePage/Carousel"
 import Banner from "../components/HomePage/Banner"
 import Header from "../components/Commons/Header"
+import Footer from "../components/Commons/Footer"
 
 const HomePage = () => {
     const [bootcamps, setBootcamps] = useState<DocumentData[]>([])
@@ -47,6 +48,9 @@ const HomePage = () => {
                 </section>
                 <BootcampsDocentes />
             </main>
+            <footer className="container my-5">
+                <Footer/>
+            </footer>
         </>
     )
 }
